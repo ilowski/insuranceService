@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="720.0" style="-fx-background-image:url(image/login.png)" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginSreenController">
+   <children>
+      <Pane layoutX="110.0" layoutY="50.0" opacity="0.73" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #fff;">
+         <children>
+            <TextField fx:id="login" layoutX="177.0" layoutY="162.0" prefHeight="34.0" prefWidth="163.0" style="-fx-background-color: #000000, #fff; -fx-background-insets: 0,1,0,0;" text="Login">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="password" cache="true" layoutX="177.0" layoutY="209.0" prefHeight="34.0" prefWidth="163.0" style="-fx-background-color: #000000, #fff; -fx-background-insets: 0,1,0,0;" text="Hasło">
+               <cursor>
+                  <Cursor fx:constant="CROSSHAIR" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="100.0" />
+               </opaqueInsets>
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <Button fx:id="loginButton" layoutX="184.0" layoutY="272.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="149.0" style="-fx-background-color: #000000, #fff; -fx-background-insets: 0,1,0,0;" text="Zaloguj">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
