@@ -7,6 +7,7 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="600.0" prefWidth="720.0" style="-fx-background-image:url(image/login.png)" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginSreenController">
+
    <children>
       <Pane layoutX="110.0" layoutY="50.0" opacity="0.73" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #fff;">
          <children>
@@ -24,7 +25,7 @@
                <font>
                   <Font size="14.0" />
                </font></TextField>
-            <Button fx:id="loginButton" layoutX="184.0" layoutY="272.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="149.0" style="-fx-background-color: #000000, #fff; -fx-background-insets: 0,1,0,0;" text="Zaloguj">
+            <Button layoutX="184.0" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#loginButton" prefHeight="43.0" prefWidth="149.0" style="-fx-background-color: #000000, #fff; -fx-background-insets: 0,1,0,0;" text="Zaloguj">
                <font>
                   <Font size="14.0" />
                </font></Button>
