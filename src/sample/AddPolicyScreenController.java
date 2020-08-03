@@ -22,6 +22,14 @@ DBConnection dbConnection = DBConnection.getInstance();
     @FXML
     TextField nrPolicy;
     @FXML
+    TextField name;
+    @FXML
+    TextField surname;
+    @FXML
+    TextField pesel;
+    @FXML
+    TextField address;
+    @FXML
     ChoiceBox typePolicy;
     @FXML
     DatePicker startDatePolicy;
@@ -34,15 +42,19 @@ DBConnection dbConnection = DBConnection.getInstance();
 
     @FXML
     public void addPolicy(javafx.scene.input.MouseEvent mouseEvent) {
-        String query = "INSERT INTO " + dbConnection.tableName + "(nrPolicy, typePolicy, startDatePolicy, endDatePolicy) VALUES (?,?,?,?)";
+        String query = "INSERT INTO " + dbConnection.tableNamePolicies + "(nrPolicy, name, surname, pesel, address, typePolicy, startDatePolicy, endDatePolicy) VALUES (?,?,?,?,?,?,?,?)";
         PreparedStatement preparedStatement = null;
 
         try {
             preparedStatement = dbConnection.connection.prepareStatement(query);
             preparedStatement.setString(1,nrPolicy.getText().toString().trim());
-            preparedStatement.setString(2,typePolicy.getValue().toString().trim());
-            preparedStatement.setString(3,startDatePolicy.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
-            preparedStatement.setString(4,endDatePolicy.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+            preparedStatement.setString(2,name.getText().toString().trim());
+            preparedStatement.setString(3,surname.getText().toString().trim());
+            preparedStatement.setString(4,pesel.getText().toString().trim());
+            preparedStatement.setString(5,address.getText().toString().trim());
+            preparedStatement.setString(6,typePolicy.getValue().toString().trim());
+            preparedStatement.setString(7,startDatePolicy.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+            preparedStatement.setString(8,endDatePolicy.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
             preparedStatement.execute();
             preparedStatement.close();
         }
