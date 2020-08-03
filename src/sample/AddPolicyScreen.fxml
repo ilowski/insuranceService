@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddPolicyScreenController">
+   <children>
+      <Button layoutX="583.0" layoutY="257.0" mnemonicParsing="false" onMouseClicked="#addPolicy" prefHeight="85.0" prefWidth="194.0" text="Dodaj polise">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="nrPolicy" layoutX="597.0" layoutY="47.0" promptText="Nr polisy" />
+      <ChoiceBox fx:id="typePolicy" layoutX="605.0" layoutY="90.0" prefWidth="150.0"><items><FXCollections fx:factory="observableArrayList"><String fx:value="xd" /> </FXCollections></items></ChoiceBox>
+      <DatePicker fx:id="startDatePolicy" layoutX="584.0" layoutY="139.0" />
+      <DatePicker fx:id="endDatePolicy" layoutX="584.0" layoutY="186.0" />
+      <Button layoutX="584.0" layoutY="359.0" mnemonicParsing="false" onMouseClicked="#returnMenu" prefHeight="85.0" prefWidth="194.0" text="Wyjdź" />
+   </children>
+</AnchorPane>
