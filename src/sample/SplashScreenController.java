@@ -16,7 +16,7 @@ import java.net.URL;
 
 import java.util.ResourceBundle;
 
-public class MyCotroller implements Initializable {
+public class SplashScreenController implements Initializable {
     public ImageView image;
 
     public void initialize(URL url, ResourceBundle rb) {
