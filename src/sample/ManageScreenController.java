@@ -36,5 +36,28 @@ public class ManageScreenController {
         addPolicyScreen.show();
 
     }
+    @FXML
+    private ImageView listPoliciesButton;
+    public void listPolicies() {
+
+        Stage ListPoliciesScreen = new Stage();
+        Parent root = null;
+
+        try {
+            root = (Parent) FXMLLoader.load(getClass().getResource("ListPoliciesScreen.fxml"));
+        }
+        catch (Exception e) {
+            Logger.getLogger(AddPolicyScreenController.class.getName()).log(Level.SEVERE, null, e);
+        }
+        Stage current = (Stage) listPoliciesButton.getScene().getWindow();
+        Scene scene = new Scene (root,1360,730);
+        ListPoliciesScreen.setScene(scene);
+        ListPoliciesScreen.initStyle(StageStyle.TRANSPARENT);
+
+        current.hide();
+
+        ListPoliciesScreen.show();
+
+    }
 
 }
