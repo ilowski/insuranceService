@@ -19,7 +19,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class LoginSreenController {
-    DBConnection dbConnection = new DBConnection();
+    DBConnection dbConnection = DBConnection.getInstance();
     @FXML
     private TextField login;
     @FXML
