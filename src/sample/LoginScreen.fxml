@@ -11,11 +11,11 @@
    <children>
       <Pane layoutX="110.0" layoutY="50.0" opacity="0.73" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #fff;">
          <children>
-            <TextField fx:id="login" layoutX="177.0" layoutY="162.0" prefHeight="34.0" prefWidth="163.0" style="-fx-background-color: #000000, #fff; -fx-background-insets: 0,1,0,0;" text="Login">
+            <TextField fx:id="login" layoutX="177.0" layoutY="162.0" prefHeight="34.0" prefWidth="163.0" promptText="Login" style="-fx-background-color: #000000, #fff; -fx-background-insets: 0,1,0,0;">
                <font>
                   <Font size="15.0" />
                </font></TextField>
-            <TextField fx:id="password" cache="true" layoutX="177.0" layoutY="209.0" prefHeight="34.0" prefWidth="163.0" style="-fx-background-color: #000000, #fff; -fx-background-insets: 0,1,0,0;" text="Hasło">
+            <TextField fx:id="password" cache="true" layoutX="177.0" layoutY="209.0" prefHeight="34.0" prefWidth="163.0" promptText="Hasło" style="-fx-background-color: #000000, #fff; -fx-background-insets: 0,1,0,0;">
                <cursor>
                   <Cursor fx:constant="CROSSHAIR" />
                </cursor>
