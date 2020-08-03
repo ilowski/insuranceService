@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -10,5 +11,13 @@
          <font>
             <Font name="Apple Braille" size="37.0" />
          </font></Label>
+      <Pane layoutX="55.0" layoutY="141.0" prefHeight="220.0" prefWidth="260.0">
+         <children>
+            <ImageView fx:id="addPolicyButton" fitHeight="187.0" fitWidth="232.0" layoutX="36.0" layoutY="17.0" onMouseClicked="#addPolicy" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/addlistt.png" />
+               </image></ImageView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
