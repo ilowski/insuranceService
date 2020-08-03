@@ -19,5 +19,14 @@
                </image></ImageView>
          </children>
       </Pane>
+      <Pane layoutX="324.0" layoutY="141.0" prefHeight="220.0" prefWidth="260.0">
+         <children>
+            <ImageView fx:id="listPoliciesButton" fitHeight="187.0" fitWidth="232.0" layoutX="36.0" layoutY="17.0" onMouseClicked="#listPolicies" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/listpolicies.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
