@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddStandardPolicyScreenController">
+   <children>
+      <Pane layoutX="446.0" layoutY="25.0" opacity="0.7" prefHeight="684.0" prefWidth="469.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="446.0" AnchorPane.rightAnchor="445.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Button layoutX="20.0" layoutY="575.0" mnemonicParsing="false" onMouseClicked="#addPolicy" prefHeight="85.0" prefWidth="194.0" style="-fx-background-color: #09c5a7 #09c5a7;" text="Dodaj polise">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="nrPolicy" alignment="CENTER" layoutX="135.0" layoutY="87.0" promptText="Nr polisy">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <ChoiceBox fx:id="typePolicy" layoutX="158.0" layoutY="19.0" onAction="#getTypePolicy" prefHeight="54.0" prefWidth="176.0" style="-fx-background-color: #09c5a7 #09c5a7;" value="Rodzaj polisy">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Rodzaj polisy" />
+                     <String fx:value="Samochodu" /> </FXCollections>
+               </items>
+            </ChoiceBox>
+            <DatePicker fx:id="startDatePolicy" layoutX="126.0" layoutY="328.0" prefHeight="45.0" prefWidth="237.0" promptText="Data założenia polisy" />
+            <DatePicker fx:id="endDatePolicy" layoutX="127.0" layoutY="389.0" prefHeight="45.0" prefWidth="237.0" promptText="Data końca polisy" />
+            <Button layoutX="255.0" layoutY="575.0" mnemonicParsing="false" onMouseClicked="#returnMenu" prefHeight="85.0" prefWidth="194.0" style="-fx-background-color: #09c5a7 #09c5a7;" text="Wyjdź" />
+            <TextField fx:id="name" alignment="CENTER" layoutX="135.0" layoutY="134.0" promptText="Imie">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="surname" alignment="CENTER" layoutX="135.0" layoutY="180.0" promptText="Nazwisko">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="pesel" alignment="CENTER" layoutX="136.0" layoutY="227.0" prefHeight="34.0" prefWidth="217.0" promptText="Pesel">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="address" alignment="CENTER" layoutX="135.0" layoutY="274.0" prefHeight="34.0" prefWidth="217.0" promptText="Adres">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
