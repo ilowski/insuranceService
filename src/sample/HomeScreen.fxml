@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ManageScreenController">
+<AnchorPane prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomeScreenController">
    <children>
       <Label layoutX="549.0" layoutY="14.0" prefHeight="46.0" prefWidth="268.0" text="manage screen">
          <font>
@@ -28,5 +28,6 @@
             </ImageView>
          </children>
       </Pane>
+      <Button layoutX="586.0" layoutY="541.0" mnemonicParsing="false" onMouseClicked="#closeApp" prefHeight="85.0" prefWidth="194.0" style="-fx-background-color: #09c5a7 #09c5a7;" text="Wyjdź" />
    </children>
 </AnchorPane>
