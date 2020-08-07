@@ -17,7 +17,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class AddPolicyScreenController {
+public class AddStandardPolicyScreenController {
 DBConnection dbConnection = DBConnection.getInstance();
     @FXML
     TextField nrPolicy;
@@ -66,20 +66,39 @@ DBConnection dbConnection = DBConnection.getInstance();
     }
 
     @FXML
+    public void getTypePolicy() {
+        if (typePolicy.getValue().toString().trim().equals("Samochodu")) {
+            Stage manageScreen = new Stage();
+            Parent root = null;
+            try {
+                root = (Parent) FXMLLoader.load(getClass().getResource("AddCarPolicyScreen.fxml"));
+            } catch (Exception e) {
+                Logger.getLogger(LoginSreenController.class.getName()).log(Level.SEVERE, null, e);
+            }
+            Stage current = (Stage) nrPolicy.getScene().getWindow();
+            Scene scene = new Scene(root, 1360, 730);
+            manageScreen.setScene(scene);
+            manageScreen.initStyle(StageStyle.TRANSPARENT);
+
+            current.hide();
+            manageScreen.show();
+        }
+    }
+    @FXML
     public void returnMenu(javafx.scene.input.MouseEvent mouseEvent) {
-        Stage manageScreen = new Stage();
+        Stage homeScreen = new Stage();
         Parent root = null;
         try {
-            root = (Parent) FXMLLoader.load(getClass().getResource("ManageScreen.fxml"));
+            root = (Parent) FXMLLoader.load(getClass().getResource("HomeScreen.fxml"));
         } catch (Exception e) {
             Logger.getLogger(LoginSreenController.class.getName()).log(Level.SEVERE, null, e);
         }
         Stage current = (Stage) nrPolicy.getScene().getWindow();
         Scene scene = new Scene(root, 1360, 730);
-        manageScreen.setScene(scene);
-        manageScreen.initStyle(StageStyle.TRANSPARENT);
+        homeScreen.setScene(scene);
+        homeScreen.initStyle(StageStyle.TRANSPARENT);
 
         current.hide();
-        manageScreen.show();
+        homeScreen.show();
     }
 }
