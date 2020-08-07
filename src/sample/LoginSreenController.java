@@ -2,15 +2,12 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.util.Duration;
-import org.controlsfx.control.Notifications;
 
 import java.net.URL;
 import java.sql.ResultSet;
@@ -76,7 +73,7 @@ public class LoginSreenController {
                         Stage manageScreen = new Stage();
                         Parent root = null;
                         try {
-                            root = (Parent) FXMLLoader.load(getClass().getResource("ManageScreen.fxml"));
+                            root = (Parent) FXMLLoader.load(getClass().getResource("HomeScreen.fxml"));
                         } catch (Exception e) {
                             Logger.getLogger(LoginSreenController.class.getName()).log(Level.SEVERE, null, e);
                         }
