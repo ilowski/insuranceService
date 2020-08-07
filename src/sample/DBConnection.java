@@ -15,6 +15,7 @@ public class DBConnection {
     private static DBConnection instance = null;
     public final String databaseName = "management";
     public final String tableNamePolicies = "policies";
+    public final String tableNameCars = "cars";
     public final String tableName = "users";
     public  final String user = "root";
     public final String password = "test123";
