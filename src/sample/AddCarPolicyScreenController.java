@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
@@ -71,6 +72,20 @@ public class AddCarPolicyScreenController {
                 preparedStatement.setString(4,model.getText().toString().trim());
                 preparedStatement.execute();
                 preparedStatement.close();
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Informacje");
+                alert.setHeaderText("Sukces!");
+                alert.setContentText("Dodano polise!");
+                nrPolicy.clear();
+                name.clear();
+                surname.clear();
+                pesel.clear();
+                address.clear();
+                typePolicy.setValue(null);
+                registrationNr.clear();
+                model.clear();
+                mark.clear();
+
             }
             catch (Exception e) {
                 e.printStackTrace();
@@ -96,6 +111,7 @@ public class AddCarPolicyScreenController {
 
                 current.hide();
                 manageScreen.show();
+
             }
         }
         @FXML
