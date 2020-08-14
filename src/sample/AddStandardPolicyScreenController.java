@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
@@ -57,6 +58,19 @@ DBConnection dbConnection = DBConnection.getInstance();
             preparedStatement.setString(8,endDatePolicy.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
             preparedStatement.execute();
             preparedStatement.close();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Informacje");
+            alert.setHeaderText("Sukces!");
+            alert.setContentText("Dodano polise!");
+            alert.showAndWait();
+            nrPolicy.clear();
+            name.clear();
+            surname.clear();
+            pesel.clear();
+            address.clear();
+            typePolicy.setValue(null);
+
         }
         catch (Exception e) {
             e.printStackTrace();
