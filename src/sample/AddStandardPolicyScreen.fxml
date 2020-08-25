@@ -24,7 +24,8 @@
                <items>
                   <FXCollections fx:factory="observableArrayList">
                      <String fx:value="Rodzaj polisy" />
-                     <String fx:value="Samochodu" /> </FXCollections>
+                     <String fx:value="Samochodu" />
+                     <String fx:value="Nieruchomości" /> </FXCollections>
                </items>
             </ChoiceBox>
             <DatePicker fx:id="startDatePolicy" layoutX="126.0" layoutY="328.0" prefHeight="45.0" prefWidth="237.0" promptText="Data założenia polisy" />
