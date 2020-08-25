@@ -97,6 +97,23 @@ DBConnection dbConnection = DBConnection.getInstance();
             current.hide();
             manageScreen.show();
         }
+        if (typePolicy.getValue().toString().trim().equals("Nieruchomości")) {
+            Stage manageScreen = new Stage();
+            Parent root = null;
+            try {
+                root = (Parent) FXMLLoader.load(getClass().getResource("AddPropertyPolicyScreen.fxml"));
+            } catch (Exception e) {
+                Logger.getLogger(LoginSreenController.class.getName()).log(Level.SEVERE, null, e);
+            }
+            Stage current = (Stage) nrPolicy.getScene().getWindow();
+            Scene scene = new Scene(root, 1360, 730);
+            manageScreen.setScene(scene);
+            manageScreen.initStyle(StageStyle.TRANSPARENT);
+
+            current.hide();
+            manageScreen.show();
+        }
+
     }
     @FXML
     public void returnMenu(javafx.scene.input.MouseEvent mouseEvent) {
