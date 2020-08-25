@@ -48,6 +48,12 @@ public class AddCarPolicyScreenController {
 
         }
 
+
+
+
+
+
+
         @FXML
         public void addPolicy(javafx.scene.input.MouseEvent mouseEvent) {
             String queryStandard = "INSERT INTO " + dbConnection.tableNamePolicies + "(nrPolicy, name, surname, pesel, address, typePolicy, startDatePolicy, endDatePolicy) VALUES (?,?,?,?,?,?,?,?)";
@@ -76,6 +82,7 @@ public class AddCarPolicyScreenController {
                 alert.setTitle("Informacje");
                 alert.setHeaderText("Sukces!");
                 alert.setContentText("Dodano polise!");
+                alert.showAndWait();
                 nrPolicy.clear();
                 name.clear();
                 surname.clear();
@@ -94,26 +101,44 @@ public class AddCarPolicyScreenController {
 
         }
 
-        @FXML
-        public void getTypePolicy() {
-            if (typePolicy.getValue().toString().trim().equals("Samochodu")) {
-                Stage manageScreen = new Stage();
-                Parent root = null;
-                try {
-                    root = (Parent) FXMLLoader.load(getClass().getResource("AddCarPolicyScreen.fxml"));
-                } catch (Exception e) {
-                    Logger.getLogger(LoginSreenController.class.getName()).log(Level.SEVERE, null, e);
-                }
-                Stage current = (Stage) nrPolicy.getScene().getWindow();
-                Scene scene = new Scene(root, 1360, 730);
-                manageScreen.setScene(scene);
-                manageScreen.initStyle(StageStyle.TRANSPARENT);
-
-                current.hide();
-                manageScreen.show();
-
+    @FXML
+    public void getTypePolicy() {
+        if (typePolicy.getValue().toString().trim().equals("Rodzaj polisy")) {
+            Stage manageScreen = new Stage();
+            Parent root = null;
+            try {
+                root = (Parent) FXMLLoader.load(getClass().getResource("AddStandardPolicyScreen.fxml"));
+            } catch (Exception e) {
+                Logger.getLogger(LoginSreenController.class.getName()).log(Level.SEVERE, null, e);
             }
+            Stage current = (Stage) nrPolicy.getScene().getWindow();
+            Scene scene = new Scene(root, 1360, 730);
+            manageScreen.setScene(scene);
+            manageScreen.initStyle(StageStyle.TRANSPARENT);
+
+            current.hide();
+            manageScreen.show();
         }
+
+        if (typePolicy.getValue().toString().trim().equals("Nieruchomości")) {
+            Stage manageScreen = new Stage();
+            Parent root = null;
+            try {
+                root = (Parent) FXMLLoader.load(getClass().getResource("AddPropertyPolicyScreen.fxml"));
+            } catch (Exception e) {
+                Logger.getLogger(LoginSreenController.class.getName()).log(Level.SEVERE, null, e);
+            }
+            Stage current = (Stage) nrPolicy.getScene().getWindow();
+            Scene scene = new Scene(root, 1360, 730);
+            manageScreen.setScene(scene);
+            manageScreen.initStyle(StageStyle.TRANSPARENT);
+
+            current.hide();
+            manageScreen.show();
+        }
+    }
+
+
         @FXML
         public void returnMenu(javafx.scene.input.MouseEvent mouseEvent) {
             Stage homeScreen = new Stage();
