@@ -29,5 +29,14 @@
          </children>
       </Pane>
       <Button layoutX="586.0" layoutY="541.0" mnemonicParsing="false" onMouseClicked="#closeApp" prefHeight="85.0" prefWidth="194.0" style="-fx-background-color: #09c5a7 #09c5a7;" text="Wyjdź" />
+      <Pane layoutX="606.0" layoutY="141.0" prefHeight="220.0" prefWidth="260.0">
+         <children>
+            <ImageView fx:id="twoWeeksPoliciesListButton" fitHeight="187.0" fitWidth="232.0" layoutX="36.0" layoutY="17.0" onMouseClicked="#twoWeekstListPolicies" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/twoweeks.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

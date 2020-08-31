@@ -61,6 +61,31 @@ public class HomeScreenController {
         ListPoliciesScreen.show();
 
     }
+
+    @FXML
+    private ImageView twoWeeksPoliciesListButton;
+
+    public void twoWeekstListPolicies() {
+
+        Stage twoWeeksListPoliciesScreen = new Stage();
+        Parent root = null;
+
+        try {
+            root = (Parent) FXMLLoader.load(getClass().getResource("TwoWeeksPolicyScreen.fxml"));
+        }
+        catch (Exception e) {
+            Logger.getLogger(AddStandardPolicyScreenController.class.getName()).log(Level.SEVERE, null, e);
+        }
+        Stage current = (Stage) twoWeeksPoliciesListButton.getScene().getWindow();
+        Scene scene = new Scene (root,1360,730);
+        twoWeeksListPoliciesScreen.setScene(scene);
+        twoWeeksListPoliciesScreen.initStyle(StageStyle.TRANSPARENT);
+
+        current.hide();
+
+       twoWeeksListPoliciesScreen.show();
+
+    }
     @FXML
     public void closeApp(javafx.scene.input.MouseEvent mouseEvent) {
         Platform.exit();
